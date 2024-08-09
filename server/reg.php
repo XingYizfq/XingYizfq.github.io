@@ -28,7 +28,7 @@
     	$data = json_decode($content,true);
     	if(array_key_exists($user,$data))
     	{
-    		showMsg("无法注册","服务器中已存在此账户，你可以尝试<a href='../index.html'>登录</a>。");
+    		showMsg("无法注册","服务器中已存在此账户，你可以尝试<a href='../login.html'>登录</a>。");
     	}
     	else
     	{
@@ -36,7 +36,7 @@
 			$data[$user] = $pass;
       		fwrite($mfile,json_encode($data));
         	fclose($mfile);
-        	showMsg("注册成功","现在可以尝试<a href='../index.html'>登录</a>。");
+        	showMsg("注册成功","现在可以尝试<a href='../login.html'>登录</a>。");
     	}
     	fclose($file);
     }
